@@ -173,10 +173,8 @@ export const mockAccounts: Account[] = [
       gender: '',
       email: 's*@gmail.com',
       jointNames: '',
-      username: 's',
-      password: 's'
-      // username: 'StaceyRoland43',
-      // password: '!StaceyRoland@212'
+      username: 'StaceyRoland43',
+      password: '!StaceyRoland@212'
     },
     bank_details: {
       account_type: 'Checking',
