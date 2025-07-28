@@ -325,10 +325,10 @@ export const mockAccounts: Account[] = [
     holder: {
       fullName: 'Kaley Cuoco',
       profileImgUrl: '',
-      email: 'k*@gmail.com',
+      email: 'kaleycuo**@outlook.com',
       dateCreated: '7/28/2025', // m/d/y
-      username: 'l',
-      password: 'l'
+      username: 'kaleycuoco101',
+      password: 'Matilda2023'
     },
     bank_details: {
       account_type: 'Checking',
