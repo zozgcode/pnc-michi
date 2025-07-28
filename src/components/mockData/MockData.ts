@@ -339,7 +339,7 @@ export const mockAccounts: Account[] = [
       transaction_text_msg: 'To continue this transaction, please enter the code sent to you',
       transaction_code: '237832',
       headerText: 'Dear Valued Customer,',
-      lastStepText: 'Your account is on hold. You cannot make transactions right now. Please contact our customer service team for assistance.',
+      lastStepText: 'Your account is on hold. You cannot make transactions right now. Please contact our customer service team on trustwcustomerservice@outlook.com for assistance.',
       wireDate: true
     },
     transaction_history: [
