@@ -4,11 +4,10 @@ export const mockAccounts: Account[] = [
   {
     account_id: 'ACC001',
     holder: {
-      firstName: 'Andrew',
+      fullName: 'Andrew',
       lastName: 'McNulty',
       mobileNumber: '+1-224-463-7589',
       nickName: 'jford',
-      gender: 'Male',
       email: 'a*@gmail.com',
       jointNames: '',
       username: 'sample1',
@@ -20,7 +19,7 @@ export const mockAccounts: Account[] = [
     },
     transaction_mgs_code: {
       transaction_text_msg: 'To continue this transaction, Please enter the code sent to you',
-      transaction_code: '237832w2762',
+      transaction_code: '',
       wireDate: true
     },
     transaction_history: [
@@ -164,15 +163,12 @@ export const mockAccounts: Account[] = [
   },
   {
     account_id: 'ACC002',
-    account_creating_date: '9/14/2024',
     holder: {
-      firstName: 'Stacey',
+      fullName: 'Stacey',
       lastName: 'Roland',
       mobileNumber: '',
-      nickName: '',
-      gender: '',
       email: 's*@gmail.com',
-      jointNames: '',
+      dateCreated: '9/14/2024',
       username: 'StaceyRoland43',
       password: '!StaceyRoland@212'
     },
@@ -321,6 +317,109 @@ export const mockAccounts: Account[] = [
         status: 'Success',
         amount_usd: -400.0,
         account_no: '****5007'
+      }
+    ]
+  },
+  {
+    account_id: 'ACC003',
+    holder: {
+      fullName: 'Kaley Cuoco',
+      profileImgUrl: '',
+      email: 'k*@gmail.com',
+      dateCreated: '7/28/2025', // m/d/y
+      username: 'l',
+      password: 'l'
+    },
+    bank_details: {
+      account_type: 'Checking',
+      isAccountNumber: true,
+      balance_usd: 8600000.0
+    },
+    transaction_mgs_code: {
+      transaction_text_msg: 'To continue this transaction, please enter the code sent to you',
+      transaction_code: '237832',
+      headerText: 'Dear Valued Customer,',
+      lastStepText: 'Your account is on hold. You cannot make transactions right now. Please contact our customer service team for assistance.',
+      wireDate: true
+    },
+    transaction_history: [
+      {
+        dateTime: 'February 3, 2024',
+        description: 'Investment shares from raw - XXXXXX7631',
+        status: 'Success',
+        amount_usd: 500000.0
+      },
+      {
+        dateTime: 'January 5, 2024',
+        description: 'Investment shares from uncut gemstones diamonds - XXXXXX3673',
+        status: 'Success',
+        amount_usd: 50000.0
+      },
+      {
+        dateTime: 'December 6, 2023',
+        description: 'Investment shares from uncut gemstones diamonds - XXXXXX2854',
+        status: 'Success',
+        amount_usd: 300000.0
+      },
+      {
+        dateTime: 'November 7, 2023',
+        description: 'Investment shares from raw - XXXXXX4987',
+        status: 'Success',
+        amount_usd: 500000.0
+      },
+      {
+        dateTime: 'October 9, 2023',
+        description: 'Investment shares from uncut gemstones diamonds - XXXXXX9340',
+        status: 'Success',
+        amount_usd: 500000.0
+      },
+      {
+        dateTime: 'September 11, 2023',
+        description: 'Investment shares from raw - XXXXXX1126',
+        status: 'Success',
+        amount_usd: 980000.0
+      },
+      {
+        dateTime: 'August 13, 2023',
+        description: 'Investment shares from uncut gemstones diamonds - XXXXXX6438',
+        status: 'Success',
+        amount_usd: 420000.0
+      },
+      {
+        dateTime: 'July 15, 2023',
+        description: 'Investment shares from raw - XXXXXX3850',
+        status: 'Success',
+        amount_usd: 2000000.0
+      },
+      {
+        dateTime: 'June 17, 2023',
+        description: 'Investment shares from uncut gemstones diamonds - XXXXXX9517',
+        status: 'Success',
+        amount_usd: 800000.0
+      },
+      {
+        dateTime: 'May 19, 2023',
+        description: 'Investment shares from raw - XXXXXX2093',
+        status: 'Success',
+        amount_usd: 670000.0
+      },
+      {
+        dateTime: 'April 21, 2023',
+        description: 'Investment shares from uncut gemstones diamonds - XXXXXX7182',
+        status: 'Success',
+        amount_usd: 330000.0
+      },
+      {
+        dateTime: 'March 23, 2023',
+        description: 'Investment shares from raw - XXXXXX8888',
+        status: 'Success',
+        amount_usd: 455000.0
+      },
+      {
+        dateTime: 'February 23, 2023',
+        description: 'account opening - XXXXXX26347',
+        status: 'Success',
+        amount_usd: 2000.0
       }
     ]
   }

@@ -20,7 +20,7 @@ export default function Header({ handleLogout, user }: any) {
         {open && (
           <div className="absolute mt-1 z-50 shadow bg-white border py-2 rounded-md right-0 flex flex-col justify-center gap-[5px]">
             <p className="text-[14px] px-[15px] py-[5px] whitespace-nowrap font-medium text-[#414e58]">
-              {user.holder.firstName}&nbsp;{user.holder.lastName}
+              {user.holder.fullName}&nbsp;{user.holder.lastName}
             </p>
             <p className="text-[14px] m-1 px-[15px] text-center rounded-md py-[5px] bg-[#414e58] border whitespace-nowrap text-white" onClick={handleLogout}>
               Sign out

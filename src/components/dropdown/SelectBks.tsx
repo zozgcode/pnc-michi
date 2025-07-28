@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { listBks } from "./mockData";
-import { IoClose } from "react-icons/io5";
-import { IoIosArrowForward } from "react-icons/io";
-import Image from "next/image";
-import { FiSearch } from "react-icons/fi";
+import React, { useState } from 'react';
+import { listBks } from './mockData';
+import { IoClose } from 'react-icons/io5';
+import { IoIosArrowForward } from 'react-icons/io';
+import Image from 'next/image';
+import { FiSearch } from 'react-icons/fi';
 
 interface Bks {
   id: number;
@@ -19,14 +19,11 @@ interface SelectBksProps {
   setSelectedBank: (bank: Bks) => void;
 }
 
-const SelectBks: React.FC<SelectBksProps> = ({
-  selectedBank,
-  setSelectedBank,
-}) => {
+const SelectBks: React.FC<SelectBksProps> = ({ selectedBank, setSelectedBank }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredBanks = listBks.filter((bks) =>
+  const filteredBanks = listBks.filter(bks =>
     bks.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -42,57 +39,60 @@ const SelectBks: React.FC<SelectBksProps> = ({
   return (
     <div className="w-full">
       <div className="flex relative items-center justify-between w-full">
-        <div className="flex relative w-full items-center gap-1">
+        <div className="flex bg-[#f8f8f8] px-3 rounded-lg relative w-full items-center gap-1">
           {selectedBank && (
-            <Image
-              src={selectedBank.logo}
-              width={100}
-              height={100}
-              alt={`${selectedBank.name} logo`}
-              className={`w-7 h-6 absolute left-4 ${selectedBank.resize ? "w-11 h-5" : ""}`}
-            />
-            )}
+            <div className="max-w-[100px]">
+              <Image
+                src={selectedBank.logo}
+                alt={`${selectedBank.name} logo`}
+                width={0} // allow CSS to control size
+                height={0}
+                sizes="(max-width: 768px) 50px, 100px"
+                className={`h-5 object-contain ${selectedBank.resize ? 'w-11 h-5' : 'w-10 h-4'}`}
+              />
+            </div>
+          )}
           <input
             type="text"
             readOnly
-            value={selectedBank ? selectedBank.name : ""}
+            value={selectedBank ? selectedBank.name : ''}
             onClick={() => setIsModalOpen(true)}
             placeholder="Select a bank"
             // className={`w-full p-3 my-2 min-h-[60px] bg-[#f8f8f8] rounded-lg border-none text-[#2e2e2e] focus:outline-none ${selectedBank ? "pl-[55px]" : ""} ${selectedBank.resize ? "pl-[65px]" : ""}`}
-            className={`w-full p-3 my-2 min-h-[60px] bg-[#f8f8f8] rounded-lg border-none text-[#2e2e2e] focus:outline-none ${
-              selectedBank ? (selectedBank.resize ? "pl-[65px]" : "pl-[55px]") : ""
+            className={`w-full p-3 min-h-[60px] bg-[#f8f8f8] rounded-lg border-none text-[#2e2e2e] focus:outline-none ${
+              selectedBank ? (selectedBank.resize ? 'pl-[65px]' : '') : ''
             }`}
           />
         </div>
         <IoIosArrowForward className="text-[#2e2e2e] absolute right-4" />
       </div>
 
-      <div className={`fixed z-20 w-full top-0 right-0 left-0 ${ isModalOpen ? "block" : "hidden" }`} >
+      <div className={`fixed z-20 w-full top-0 right-0 left-0 ${isModalOpen ? 'block' : 'hidden'}`}>
         <div className="bg-white rounded shadow-lg w-full h-screen">
-          <div className="bg-[#414e58] text-[#ffffff] sticky top-0 z-10 p-3 py-5 flex items-center justify-between gap-1">
+          <div className="bg-[#d71e28] text-[#ffffff] sticky top-0 z-10 p-3 py-5 flex items-center justify-between gap-1">
             <div className="flex items-center gap-2">
               <IoClose className="relative text-xl top-[1px]" onClick={handleCloseModal} />
               <span className="font-semibold">Select Bank</span>
             </div>
           </div>
           <div className="relative p-4">
-            <FiSearch className="absolute text-[#414e58] text-2xl left-[28px] top-[42px]" />
+            <FiSearch className="absolute text-[#d71e28] text-2xl left-[28px] top-[42px]" />
             <input
               type="text"
               placeholder="Search Bank Name"
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={e => setSearchTerm(e.target.value)}
               className="w-full pl-12 p-3 my-2 mb-4 min-h-[60px] bg-[#f8f8f8] rounded-lg border-none text-[#2e2e2e] focus:outline-none"
             />
             <div className="max-h-[500px] py-4 border rounded-lg shadow-sm overflow-y-auto">
-              {filteredBanks.map((bks) => (
+              {filteredBanks.map(bks => (
                 <div
                   key={bks.id}
                   onClick={() => {
                     handleSelectBank(bks);
                     handleCloseModal();
                   }}
-                  className="flex px-4 gap-2 items-center p-2 cursor-pointer hover:bg-[#414e58]/10"
+                  className="flex px-4 gap-2 items-center p-2 cursor-pointer hover:bg-[#d71e28]/10"
                 >
                   <div className="w-[60px] h-[50px] rounded-full flex items-center justify-center border">
                     <Image
@@ -100,9 +100,9 @@ const SelectBks: React.FC<SelectBksProps> = ({
                       width={100}
                       height={100}
                       alt={`${bks.name} logo`}
-                      className="max-w-max h-4"
+                      className="w-[30px] object-contain h-4"
                     />
-                  </div> 
+                  </div>
                   <div className="text-left w-full">{bks.name}</div>
                 </div>
               ))}

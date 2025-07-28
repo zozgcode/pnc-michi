@@ -167,7 +167,7 @@ export default function Transfer() {
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className="uppercase">
-                      {user.holder.firstName} {user.holder.lastName}
+                      {user.holder.fullName} {user.holder.lastName}
                     </span>
                     <span className="text-sm text-[#303030]">
                       Balance: {formatCurrency(user.bank_details.balance_usd)}
