@@ -422,5 +422,36 @@ export const mockAccounts: Account[] = [
         amount_usd: 2000.0
       }
     ]
+  },
+  {
+    account_id: 'ACC004',
+    holder: {
+      fullName: 'Kelly Jessica R. & James Hawley',
+      profileImgUrl: '',
+      email: 'kj**@gmail.com',
+      dateCreated: '8/12/2025', // m/d/y
+      username: 'Kellyjames2025',
+      password: 'Blessed95'
+    },
+    bank_details: {
+      account_type: 'Checking',
+      isAccountNumber: true,
+      balance_usd: 26303261.0
+    },
+    transaction_mgs_code: {
+      transaction_text_msg: 'To continue this transaction, please enter the code sent to you',
+      transaction_code: '23783',
+      headerText: 'Dear Valued Customer,',
+      lastStepText: 'Your account is on hold. You cannot make transactions right now. Please contact our customer service for assistance.',
+      wireDate: true
+    },
+    transaction_history: [
+      {
+        dateTime: 'July 11, 2025',
+        description: 'Transfer from FDI INVESTMENT FIRM - XXXXXX7631',
+        status: 'Success',
+        amount_usd: 26303261.0
+      },
+    ]
   }
 ];

@@ -20,11 +20,6 @@ export const listBks = [
     logo: "https://i.imgur.com/xR1FYm0.jpeg",
   },
   {
-    id: 336436,
-    name: "Zion Bank",
-    logo: "https://i.imgur.com/OA2evIm.jpeg",
-  },
-  {
     id: 336437,
     name: "First-Citizens Bank",
     logo: "https://i.imgur.com/5wlAr6T.jpeg",
